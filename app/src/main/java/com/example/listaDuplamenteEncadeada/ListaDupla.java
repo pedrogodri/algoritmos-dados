@@ -69,21 +69,21 @@ public class ListaDupla<T>{
 
     public void liberar() {
         NoListaDupla<T> p = this.primeiro;
-        while(p != null) {
+        while (p != null) {
             NoListaDupla<T> outro = p.getProximo();
-            p.setProximo(null);
-            p.setAnterior(null);
+            p.setProximo(null); 
+            p.setAnterior(null); 
             p = outro;
         }
+        this.primeiro = null; 
     }
-
     public String toString(){
         String resultado = "";
         NoListaDupla<T> p = this.primeiro;
 
         while(p != null){
             if(!p.equals(this.primeiro)){
-                resultado += ",";
+                resultado += ", ";
             }
 
             resultado += p.getInfo();

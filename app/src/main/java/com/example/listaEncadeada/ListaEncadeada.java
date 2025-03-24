@@ -4,7 +4,6 @@ public class ListaEncadeada<T> {
     
     public NoLista<T> primeiro;
 
-
     public ListaEncadeada() {
         this.primeiro = null;
     }
@@ -40,12 +39,6 @@ public class ListaEncadeada<T> {
         NoLista<T> anterior = null;
         NoLista<T> p = primeiro;
 
-        // NoLista<T> registroEncontrado = buscar(info);  
-
-        // if(registroEncontrado != null){
-
-        // }
-
         while(p != null && !(p.getInfo().equals(info))){
             anterior = p;
             p = p.getProximo();
@@ -73,7 +66,6 @@ public class ListaEncadeada<T> {
     }
 
     public NoLista<T> obterNo2(int index){
-        //não é bom fazer assim 
         int comprimento = obterComprimento();
         NoLista<T> p = primeiro;
         NoLista<T> noEncontrado = null;
